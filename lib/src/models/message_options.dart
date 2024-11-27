@@ -13,6 +13,7 @@ class MessageOptions {
     this.onLongPressMessage,
     this.onPressMessage,
     this.onPressMention,
+    this.onTapDown,
     Color? currentUserContainerColor,
     Color? currentUserTextColor,
     this.containerColor = const Color(0xFFF5F5F5),
@@ -80,6 +81,9 @@ class MessageOptions {
 
   /// Function to call when the user long press on a message
   final Function(ChatMessage)? onLongPressMessage;
+
+  /// Function to call when the user tap down on a message
+  final Function(TapDownDetails)? onTapDown;
 
   /// Function to call when the user press on a message
   final Function(ChatMessage)? onPressMessage;
